@@ -25,4 +25,4 @@ flutter run
 </table>
 
 ## Contributing
-Pull requests are welcome go ahead and enjoy.
+Pull requests are welcomed.
