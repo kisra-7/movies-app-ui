@@ -1,10 +1,15 @@
-# movies_app
+# Movies App UI 🎥
 
-A new Flutter project.
+This project showcases a sleek and modern design for a Movies App. The app features intuitive navigation and visually appealing layouts, offering an immersive user experience.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+clone project from repo and run using command.
+
+```bash
+flutter run
+```
+
 
 ## Screenshots
 <table>
@@ -18,3 +23,6 @@ This project is a starting point for a Flutter application.
 
 
 </table>
+
+## Contributing
+Pull requests are welcome go ahead and enjoy.
