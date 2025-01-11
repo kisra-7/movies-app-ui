@@ -1,16 +1,28 @@
-# movies_app
+# Movies App UI 🎥
 
-A new Flutter project.
+This project showcases a sleek and modern design for a Movies App. The app features intuitive navigation and visually appealing layouts, offering an immersive user experience.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+clone project from repo and run using command.
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+<table>
+
+<tr>
+    <td> <img src="https://github.com/kisra-7/movies-app-ui/blob/69a1c877be387672c26e37b463e3657299471293/Screenshot%202025-01-10%20030411.png" width="200" /></td>
+    <td><img src="https://github.com/kisra-7/movies-app-ui/blob/69a1c877be387672c26e37b463e3657299471293/Screenshot%202025-01-10%20030452.png" width="200" /></td>
+    </tr>
+
+
+
+
+</table>
+
+## Contributing
+Pull requests are welcomed.
