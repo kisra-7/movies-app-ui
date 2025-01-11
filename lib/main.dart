@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:movies_app/home_page.dart';
+import 'package:movies_app/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +26,6 @@ class _MyAppState extends State<MyApp> {
             scaffoldBackgroundColor: const Color(0xFF0F111D),
             bottomNavigationBarTheme: const BottomNavigationBarThemeData(
                 backgroundColor: Color(0xFF0F111D))),
-        home: const HomePage());
+        home: HomePage());
   }
 }

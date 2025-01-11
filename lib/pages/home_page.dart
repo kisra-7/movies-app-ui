@@ -1,11 +1,15 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:movies_app/movie_container.dart';
-import 'package:movies_app/new_movies.dart';
+import 'package:movies_app/compnents/movie_container.dart';
+import 'package:movies_app/compnents/new_movies.dart';
+import 'package:movies_app/controllers/movies_controller.dart';
+import 'package:movies_app/models/movie.dart';
+import 'package:movies_app/pages/movie_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+  final movieController = MoviesController();
 
   @override
   Widget build(BuildContext context) {
@@ -120,22 +124,46 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    MovieContainer(
-                      moviePath: 'assets/images/midway.png',
-                    ),
-                    MovieContainer(
-                      moviePath: 'assets/images/avengerscover.png',
-                    ),
-                    MovieContainer(
-                      moviePath: 'assets/images/batman.png',
-                    ),
-                  ],
+              SizedBox(
+                height: MediaQuery.sizeOf(context).height * 0.27,
+                child: Expanded(
+                  child: ListView.builder(
+                    itemCount: movieController.upcomingMovies.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      Movie upMovie = movieController.upcomingMovies[index];
+                      return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MoviePage(
+                                  movie: upMovie,
+                                ),
+                              ),
+                            );
+                          },
+                          child: MovieContainer(moviePath: upMovie.imagePath));
+                    },
+                  ),
                 ),
               ),
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       MovieContainer(
+              //         moviePath: 'assets/images/midway.png',
+              //       ),
+              //       MovieContainer(
+              //        moviePath: 'assets/images/avengerscover.png',
+              //      ),
+              //      MovieContainer(
+              //        moviePath: 'assets/images/batman.png',
+              //      ),
+              //    ],
+              //  ),
+              //),
               SizedBox(
                 height: 20,
               ),
@@ -155,19 +183,26 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    NewMovies(moviePath: 'assets/images/joker.png'),
-                    NewMovies(moviePath: 'assets/images/20.png'),
-                    NewMovies(moviePath: 'assets/images/ali.png'),
-                    NewMovies(moviePath: 'assets/images/kevin.png'),
-                    NewMovies(moviePath: 'assets/images/badboys.png'),
-                    NewMovies(moviePath: 'assets/images/julia.png'),
-                    NewMovies(moviePath: 'assets/images/madagascar.png'),
-                    NewMovies(moviePath: 'assets/images/planet.png'),
-                  ],
+              SizedBox(
+                height: MediaQuery.sizeOf(context).height * 0.25,
+                child: ListView.builder(
+                  itemCount: movieController.newMovies.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+                    Movie movie = movieController.newMovies[index];
+                    return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MoviePage(
+                                movie: movie,
+                              ),
+                            ),
+                          );
+                        },
+                        child: NewMovies(moviePath: movie.imagePath));
+                  },
                 ),
               )
             ],
