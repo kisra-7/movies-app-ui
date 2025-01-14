@@ -1,17 +1,12 @@
-# Movies App UI 🎥
+# Movies App UI
 
 The Movies App UI is a beautifully designed and user-friendly interface for exploring movies, created using Flutter. This project showcases an elegant layout with seamless navigation, making it perfect for users to browse, search, and discover their favorite films effortlessly.
 
-Key Features
-
-Home Screen: A dynamic and visually appealing display of trending, popular, and new releases.
-
-Search Functionality: A clean and intuitive search bar for quickly finding movies.
-
-Movie Details Page: A detailed view with a stunning poster, movie title, release date, synopsis, ratings, and genre tags.
-
-Responsive Design: The UI is fully responsive, ensuring a great user experience across all device sizes.
-
+## Key Features
+- **Home Screen**: A dynamic and visually appealing display of trending, popular, and new releases.
+- **Search Functionality**: A clean and intuitive search bar for quickly finding movies.
+- **Movie Details Page**: A detailed view with a stunning poster, movie title, release date, synopsis, ratings, and genre tags.
+- **Responsive Design**: The UI is fully responsive, ensuring a great user experience across all device sizes.
 ## Installation
 
 clone project from repo and run using command.
